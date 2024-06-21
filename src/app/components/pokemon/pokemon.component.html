@@ -1,0 +1,7 @@
+<p>Who's that Pokemon?!</p>
+<p>hint: {{ this.hint }}</p>
+
+<input type="text" #userInput >
+<button (click)="this.setName(userInput.value)">Search</button>
+
+<app-display-pokemon [pokemonDisplay]="this.pokemonData" [(hint)]="this.hint"></app-display-pokemon>

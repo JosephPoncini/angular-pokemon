@@ -1,0 +1,10 @@
+<h1>{{ pokemonDisplay?.name | uppercase}}</h1>
+<img [src]="pokemonDisplay?.sprites?.front_default" alt="">
+<ul>
+    @for(ability of pokemonDisplay?.abilities; track ability.ability.name){
+        <li >{{ ability.ability.name }}</li>
+    }
+
+    <!-- <li *ngFor="let ability of pokemonDisplay?.abilities; track ability.ability.name">{{ ability.ability.name }}</li> -->
+</ul>
+<button (click)="giveHint()">give hint</button>
